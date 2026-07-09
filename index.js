@@ -5,11 +5,11 @@ const port = 8000;
 const PASSWORD = 123;
 
 app.get('/', (req, res) => {
-  res.send('Hello world!');
+  res.send('Main Page');
 });
 
-app.get('/encode/:text', (req, res) => {
-  res.send('Item ' + req.params.id);
+app.get('/:hello', (req, res) => {
+  res.send('Response ' + req.params.hello);
 });
 
 app.listen(port, () => {
